@@ -1,24 +1,32 @@
-# README
+# React.js / Rails application sample
+Ruby on rails + React.js with TypeScript on Docker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Version
 
-Things you may want to cover:
+* ruby：2.6.2
+* rails：5.2.3
 
-* Ruby version
+# Getting started
 
-* System dependencies
+* Clone a repository
 
-* Configuration
+```
+$ git clone git@github.com:Ushinji/ts_react_rails.git
+$ cd path/to/repo
+```
 
-* Database creation
+* Execute a setup script `bootstrap`
 
-* Database initialization
+```
+$ ./scripts/development/bootstrap
+```
 
-* How to run the test suite
+* Access to http://localhost:3000 
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
+
+
+
+
