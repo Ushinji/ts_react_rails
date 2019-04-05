@@ -15,9 +15,20 @@ services:
       DATABASE_HOST: db
     depends_on:
       - db
+      - frontend
     ports:
       - "3000:3000"
-  
+  frontend:
+    build:
+      context: "./"
+      target: "base"
+    command: [ "npm", "start" ]
+    environment:
+      NODE_ENV: development
+    ports:
+      - "3010:3010"
+    volumes:
+      - ".:/app"
   db:
     image: mysql:5.7
     environment:
