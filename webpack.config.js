@@ -8,7 +8,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, "./public/dist"),
     filename: "[name]-[hash].js",
-    publicPath: `http://localhost:3010/`
+    publicPath:
+      process.env.NODE_ENV === "production" ? "" : "http://localhost:3010/"
   },
   resolve: {
     extensions: [".js", ".jsx"]

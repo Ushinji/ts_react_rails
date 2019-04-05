@@ -3,6 +3,9 @@
 module ApplicationHelper
   def assets_path(path)
     return webpack_dev_server_path(path)
+    manifest = Rails.application.config.assets_manifest
+    path = manifest[path] if manifest && manifest[path].present?
+    "/dist/#{path}"
   end
 
   private
