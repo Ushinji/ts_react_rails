@@ -1,8 +1,13 @@
 import * as React from 'react';
-import Counter from './pages/Counter';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
 
 const App: React.FC = () => {
-  return <Counter />;
+  return (
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+  );
 };
 
 export default App;
