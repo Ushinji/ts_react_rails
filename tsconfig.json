@@ -11,5 +11,10 @@
     "noImplicitReturns": true,
     "lib": ["es2017", "dom"],
     "baseUrl": "./",
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ]
   }
 }
