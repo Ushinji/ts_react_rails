@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Counter Snapshot test 1`] = `
+exports[`pages/Counter Snapshot test 1`] = `
 <DocumentFragment>
   .c0 {
   display: inline-block;

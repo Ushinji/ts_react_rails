@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`atoms/Button Snapshot test 1`] = `
+<DocumentFragment>
+  .c0 {
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 8px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #337ab7;
+  color: #ffffff;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #286090;
+  cursor: pointer;
+}
+
+<button
+    class="c0"
+  >
+    TEST_BUTTON
+  </button>
+</DocumentFragment>
+`;

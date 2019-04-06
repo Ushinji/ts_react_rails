@@ -1,22 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components';
-
-const Button = styled.button`
-  display: inline-block;
-  font-size: 18px;
-  border-radius: 8px;
-  text-align: center;
-  text-decoration: none;
-  background-color: #337ab7;
-  color: #ffffff;
-
-  &:hover {
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #286090;
-    cursor: pointer;
-  }
-`;
+import Button from '@/components/atoms/Button';
 
 const Counter: React.FC = () => {
   const [count, SetCount] = React.useState(0);
