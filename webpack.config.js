@@ -3,7 +3,7 @@ const ManifestPlugin = require("webpack-manifest-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/index.jsx"
+    main: "./src/index.tsx"
   },
   output: {
     path: path.join(__dirname, "./public/dist"),
@@ -12,14 +12,14 @@ module.exports = {
       process.env.NODE_ENV === "production" ? "" : "http://localhost:3010/"
   },
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: [".js", ".jsx", ".ts", ".tsx"]
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.*(ts|tsx)$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        loader: "ts-loader"
       }
     ]
   },
