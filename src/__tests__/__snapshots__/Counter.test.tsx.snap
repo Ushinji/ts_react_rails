@@ -2,11 +2,31 @@
 
 exports[`Counter Snapshot test 1`] = `
 <DocumentFragment>
-  <div>
+  .c0 {
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 8px;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #337ab7;
+  color: #ffffff;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #286090;
+  cursor: pointer;
+}
+
+<div>
     <h1>
       カウンター
     </h1>
     <button
+      class="c0"
       type="button"
     >
       ＋
