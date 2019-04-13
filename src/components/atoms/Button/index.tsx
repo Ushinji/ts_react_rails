@@ -51,13 +51,14 @@ const Spinner = styled.div`
   }
 `;
 
-const Button: React.FC<
-  React.ButtonHTMLAttributes<HTMLButtonElement>
-> = props => {
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  submitting?: boolean;
+}
+
+const Button: React.FC<Props> = ({ submitting = false, ...props }) => {
   return (
     <StyledButton {...props}>
-      {props.children}
-      <Spinner />
+      {submitting ? <Spinner /> : props.children}
     </StyledButton>
   );
 };
