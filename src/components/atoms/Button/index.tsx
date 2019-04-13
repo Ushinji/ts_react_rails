@@ -2,18 +2,21 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   font-size: 18px;
   border-radius: 8px;
   text-align: center;
   text-decoration: none;
-  background-color: #337ab7;
+  background-color: #3173dc;
   color: #ffffff;
+  padding: 8px 16px;
+  width: 100%;
 
   &:hover {
     text-decoration: none;
     color: #ffffff;
-    background-color: #286090;
+    background-color: #266cda;
     cursor: pointer;
   }
 `;
