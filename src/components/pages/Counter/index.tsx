@@ -35,7 +35,12 @@ const Counter: React.FC = () => {
         カウンター：
         {count}
       </Title>
-      <Button type="button" onClick={handleClick} submitting={submitting}>
+      <Button
+        type="button"
+        onClick={handleClick}
+        submitting={submitting}
+        disabled={submitting}
+      >
         Count up
       </Button>
     </Container>

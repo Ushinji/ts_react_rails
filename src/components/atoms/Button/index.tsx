@@ -12,12 +12,22 @@ const StyledButton = styled.button`
   color: #ffffff;
   padding: 8px 16px;
   width: 100%;
+  transition: 0.2s;
+  outline: none;
 
   &:hover {
     text-decoration: none;
     color: #ffffff;
     background-color: #266cda;
     cursor: pointer;
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+  &:disabled,
+  &:disabled:hover {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 `;
 
