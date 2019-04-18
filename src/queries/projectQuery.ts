@@ -9,23 +9,26 @@ interface Project {
 
 const useProject = (id: number) => {
   const [project, setProject] = useState<Project>();
+  const [error, setError] = useState(false);
   const [notFound, setNotFound] = useState(false);
 
   const fetchProject = async () => {
     const res = await fetch(`/api/projects/${id}`);
-    if (res.status === 404) {
-      setNotFound(true);
+    if (res.ok) {
+      const fetchedProject = (await res.json()) as Project;
+      setProject(fetchedProject);
+      setError(false);
       return;
     }
-    const fetchedProject = (await res.json()) as Project;
-    setProject(fetchedProject);
+    setError(true);
+    if (res.status === 404) setNotFound(true);
   };
 
   useEffect(() => {
     fetchProject();
   });
 
-  return { project, notFound };
+  return { project, error, notFound };
 };
 
 export default useProject;
