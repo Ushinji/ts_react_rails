@@ -7,7 +7,7 @@ interface Project {
   displayName: string;
 }
 
-const useProject = (id: number) => {
+export const useProject = (id: number) => {
   const [project, setProject] = useState<Project>();
   const [notFound, setNotFound] = useState(false);
   const fetchProject = useCallback(async () => {
@@ -26,5 +26,3 @@ const useProject = (id: number) => {
 
   return { project, notFound };
 };
-
-export default useProject;

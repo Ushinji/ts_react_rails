@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import useProject from '@/queries/projectQuery';
+import { useProject } from '@/queries/projectQuery';
 
 type Props = RouteComponentProps<{ projectId: string }>;
 
