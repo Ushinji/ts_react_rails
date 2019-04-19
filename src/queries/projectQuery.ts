@@ -7,6 +7,25 @@ interface Project {
   displayName: string;
 }
 
+export const useProjectList = () => {
+  const [projectList, setProjectList] = useState<Project[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchProjectList = useCallback(async () => {
+    setIsLoading(true);
+    const res = await fetch(`/api/projects`);
+    const projects = (await res.json()) as Project[];
+    setProjectList(projects);
+    setIsLoading(false);
+  }, []);
+
+  useEffect(() => {
+    fetchProjectList();
+  }, []);
+
+  return { projectList, isLoading };
+};
+
 export const useProject = (id: number) => {
   const [project, setProject] = useState<Project>();
   const [notFound, setNotFound] = useState(false);
