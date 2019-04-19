@@ -6,4 +6,12 @@ class Api::ProjectsController < ApplicationController
       displayName: project.display_name,
     }
   end
+
+  def index
+    projects = Project.all
+    render json: projects.map{ |p| {
+      id: p.id,
+      displayName: p.display_name
+    }}
+  end
 end
