@@ -15,7 +15,7 @@ describe('pages/ProjectList', () => {
     await driver.quit();
   });
 
-  it.only('Display Project list item', async () => {
+  it('Display Project list item', async () => {
     const capabilities = Capabilities.chrome();
     capabilities.set('chromeOptions', {
       args: ['--headless', '--no-sandbox', `--window-size=1280,700`],
